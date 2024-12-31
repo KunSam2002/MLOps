@@ -34,7 +34,6 @@ The role of this streaming pipeline is to listen 24/7 to available financial new
 
 <br/>
 
-![architecture](../../media/feature_pipeline_architecture.png)
 
 
 # 2. Install
@@ -151,15 +150,12 @@ Afterward, you must fork the repository and add all the credentials within your 
 
 Go to your `forked repository -> Settings -> Secrets and variables -> Actions -> New repository secret`.
 
-Now, add all the secrets as in the image below. 
-
-![GitHub Actions Secrets](../../media/github_actions_secrets.png)
+Now, add all the secrets.
 
 <br/>
 
 Now, to **automatically deploy** the streaming pipeline to AWS using the GitHub Action's CI/CD pipeline, follow the next steps: `Actions Tab -> Continuous Deployment (CD) | Streaming Pipeline action (on the left) -> Press "Run workflow"`.
 
-![GitHub Actions CD](../../media/github_actions_cd.png)
 
 <br/>
 
