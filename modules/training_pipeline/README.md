@@ -29,7 +29,6 @@ In this case, we will use the finance dataset generated using the `q_and_a_datas
 
 <br/>
 
-![architecture](../../media/training_pipeline_architecture.png)
 
 
 # 2. Install
