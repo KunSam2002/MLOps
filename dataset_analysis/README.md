@@ -39,7 +39,5 @@ Here are the key steps of our EDA (Exploratory Data Analysis) on the prompts of 
 - Helps limit the input prompt to a specific size, allowing the completion sentence to be longer.
 
 
-![EDA](../media/eda_prompts_dataset.png)
-
 ### Learn More
 → Check out the EDA notebook at [dataset_analysis/prompts_eda.ipynb](https://github.com/iusztinpaul/hands-on-llms/blob/main/dataset_analysis/prompts_eda.ipynb) to see the complete analysis.  
