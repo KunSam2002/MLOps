@@ -67,19 +67,15 @@ The **inference pipeline** is **deployed** using [Beam](https://docs.beam.cloud/
 
 Used `GPT3.5` to generate a financial Q&A dataset to fine-tune our open-source LLM to specialize in using financial terms and answering financial questions. Using a large LLM, such as `GPT3.5` to generate a dataset that trains a smaller LLM (e.g., Falcon 7B) is known as **fine-tuning with distillation**. 
 
-→ To understand how we generated the financial Q&A dataset, [check out this article](https://open.substack.com/pub/paulabartabajo/p/how-to-generate-financial-q-and-a?r=1ttoeh&utm_campaign=post&utm_medium=web) written by [Pau Labarta](https://github.com/Paulescu).
+→ To understand how to generate the financial Q&A dataset, [check out this article](https://open.substack.com/pub/paulabartabajo/p/how-to-generate-financial-q-and-a?r=1ttoeh&utm_campaign=post&utm_medium=web).
 
 
 ## 2. Setup External Services
 
-Before diving into the modules, you have to set up a couple of additional external tools for the course.
-
-**NOTE:** You can set them up as you go for every module, as we will point you in every module what you need.
-
 ### 2.1. Alpaca
 `financial news data source`
 
-Follow this [document](https://alpaca.markets/docs/market-data/getting-started/) to show you how to create a FREE account and generate the API Keys you will need within this course.
+Follow this [document](https://alpaca.markets/docs/market-data/getting-started/) to show you how to create a FREE account and generate the API Keys.
 
 **Note:** 1x Alpaca data connection is FREE.
 
@@ -88,7 +84,7 @@ Follow this [document](https://alpaca.markets/docs/market-data/getting-started/)
 
 Go to [Qdrant](https://qdrant.tech/?utm_source=thepauls&utm_medium=partner&utm_content=github) and create a FREE account.
 
-After, follow [this document](https://qdrant.tech/documentation/cloud/authentication/?utm_source=thepauls&utm_medium=partner&utm_content=github) on how to generate the API Keys you will need within this course.
+After, follow [this document](https://qdrant.tech/documentation/cloud/authentication/?utm_source=thepauls&utm_medium=partner&utm_content=github) on how to generate the API Keys.
 
 **Note:** We will use only Qdrant's freemium plan. 
 
@@ -97,7 +93,7 @@ After, follow [this document](https://qdrant.tech/documentation/cloud/authentica
 
 Go to [Comet ML](https://www.comet.com/signup?utm_source=thepauls&utm_medium=partner&utm_content=github) and create a FREE account.
 
-After, [follow this guide](https://www.comet.com/docs/v2/guides/getting-started/quickstart/) to generate an API KEY and a new project, which you will need within the course.
+After, [follow this guide](https://www.comet.com/docs/v2/guides/getting-started/quickstart/) to generate an API KEY and a new project.
 
 **Note:** We will use only Comet ML's freemium plan. 
 
@@ -114,10 +110,10 @@ To read more about Beam, here is an [introduction guide](https://docs.beam.cloud
 
 #### Troubleshooting
 
-When using Poetry, we had issues locating the Beam CLI inside a Poetry virtual environment. To fix this, after installing Beam, we create a symlink that points to Poetry's binaries, as follows:
+When using Poetry, there might be issues locating the Beam CLI inside a Poetry virtual environment. To fix this, after installing Beam, we create a symlink that points to Poetry's binaries, as follows:
  ```shell
-  export COURSE_MODULE_PATH=<your-course-module-path> # e.g., modules/training_pipeline
-  cd $COURSE_MODULE_PATH
+  export MODULE_PATH=<your-module-path> # e.g., modules/training_pipeline
+  cd $MODULE_PATH
   export POETRY_ENV_PATH=$(dirname $(dirname $(poetry run which python)))
 
   ln -s /usr/local/bin/beam ${POETRY_ENV_PATH}/bin/beam
@@ -131,7 +127,7 @@ When using Poetry, we had issues locating the Beam CLI inside a Poetry virtual e
 
  After, download and install their [AWS CLI v2.11.22](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) and [configure it](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html) with your credentials.
 
- **Note:** You will pay only for what you use. You will deploy only a `t2.small` EC2 VM, which is only `~$0.023` / hour. If you don't want to deploy the feature pipeline, using AWS is optional.
+ **Note:** You will pay only for what you use. We will deploy only a `t2.small` EC2 VM, which is only `~$0.023` / hour. If you don't want to deploy the feature pipeline, using AWS is optional.
 
 
 ## 3. Install & Usage
